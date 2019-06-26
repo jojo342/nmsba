@@ -1,0 +1,282 @@
+@font-face{
+   font-family: 'nmsFont';
+    src: url('/../assets/fonts/nmsFont.woff') format('woff');
+}
+
+//Color Scheme
+@dark-green:#1B6067;
+@deep-pink:#902A49;
+@light-green:#C6CCB2;
+@off-white:#E5EAFA;
+@taupe:#BE8A58;
+@green:#1c494d;
+
+.temp-border{
+  border: 1px dashed @off-white;
+}
+
+.shadow{
+  text-shadow: 2px 2px 1px #484848;
+}
+
+.currentPage{
+  text-decoration: underline;
+}
+
+.full-height{
+  height: 100%;
+}
+
+.border-box{
+  box-sizing: border-box;
+}
+
+.grid-bg-color{
+  background-color: rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}//use for search by image section
+
+.spacing{
+  letter-spacing: 2px;
+}
+
+.roboto{
+  font-family: 'Roboto', sans-serif;
+}
+
+html,body{
+  min-height: 100%;
+}
+
+body{
+  background-color: @dark-green;
+  background: linear-gradient(270deg, rgba(34, 102, 109, 0.4) 0%, rgba(159, 199, 192, 0.4) 100%), url('src/assets/imgs/nms-bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  color: @off-white;
+  margin: 0;
+  cursor: default;
+  font-family: "arial";
+  
+  //stops highlights on page
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+nav{
+//  .temp-border;
+  height: 10vh;
+  background-color: @dark-green; 
+  //full width nav code
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  //end
+  .border-box;
+  a:link{
+    text-decoration: none;
+  }
+  a{
+    color: @off-white;
+  }
+}
+
+.col3 li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+li{
+//  .temp-border;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-family: 'nmsFont';
+}
+
+.navWrapper{
+  display: grid;
+  grid-template-columns: 5% 55% 40%;
+}
+
+.icon{
+  height: 60px;
+}
+
+.col2Text{
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+  span{
+   .spacing; 
+  }
+}
+
+.col3{
+  font-size: 25px;
+  text-align: right;
+}
+
+header{
+ //.temp-border;
+  height: 30vh;
+  width: auto;
+  text-align: center;
+  .roboto;
+  padding-top: 10vh;
+  .shadow;
+}
+
+h1{
+  font-size: 70px;
+  margin-bottom: 0;
+}
+
+h2{
+  font-size: 30px;
+}
+
+main{
+//  .temp-border;
+  .shadow;
+  .border-box;
+  text-align: center;
+}
+
+main input{
+  width: 50vh;
+  text-align: center;
+  padding: 15px;
+  background: rgba(255,255,255,0.8);
+  margin-bottom: 3vh;
+  //allows text highlights
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+
+.grid{
+  display: grid;
+  grid-template-rows: 5% 90% 5%;
+  grid-template-columns: 20% 60% 20%;
+  backdrop-filter: blur(4px);  
+  .border-box;
+  height: 42vh;
+}
+
+form{
+//  .temp-border;
+  .border-box;
+  box-sizing: border-box;
+  grid-row: 2;
+  grid-column: 2;
+  align-self:stretch;
+  background-color: rgba(229, 234, 250, 0.6);
+  padding-top: 6vh;
+}
+
+//placeholder color
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: @deep-pink;
+  .roboto;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: @deep-pink;
+  .roboto;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: @deep-pink;
+  .roboto;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: @deep-pink;
+  .roboto;
+  
+}
+
+button:hover{
+  background-color: @deep-pink;
+  border: 1px solid @deep-pink;
+  color: @off-white;
+}
+
+button {
+  background-color: @dark-green;
+  //transition: bg color fade-in
+  transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+  //bg color fade-in: end
+  color: @off-white;
+  border: 1px solid @green;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  p{
+    padding-right: 2vh;
+    padding-left: 2vh;
+  }
+  cursor: pointer;
+}
+
+main div{
+  .temp-border;
+  .border-box;
+}
+
+footer{
+//  .temp-border;
+  height: auto;
+  .border-box;
+  color: @off-white;
+  text-align: right;
+  padding-right: 5vh;
+  p{
+    .border-box;
+  }
+  a:active{
+    text-decoration: none;
+  }
+}
+
+//Media queries
+//tablet portrait
+@media only screen and (max-width : 700px) {  
+  nav{
+    li, .col2Text{
+      padding-top: 2vh;
+    }
+    
+    li{
+      font-size: 13px;
+    }
+    
+    .col2Text{
+      font-size: 30px;
+    }
+  }
+  
+  h1{
+    font-size: 45px;
+  }
+  
+  h2{
+    font-size: 30px;
+  }
+  
+  footer{
+    padding-right: 2vh;
+  }
+}

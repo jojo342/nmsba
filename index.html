@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />		
+    <link rel="icon" type="image/png"  href="/../assets/imgs/favico.png">
+    <title>NMS Builder Aid</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet"> 
+    <script src="build/script.bundle.js"></script>
+  </head>
+  <body>
+    <nav class="navWrapper">
+      <div><!-- col 1-->
+        <img src="/../assets/imgs/icon.png" class="icon" alt="icon">
+      </div><!-- col 1 end-->
+      <div class="col2"><!-- col 2-->
+        <ul>
+          <a href="#">
+            <li class="col2Text"><span class="spacing">NMS</span> Builder Aid</li>
+          </a>
+        </ul>
+      </div><!-- col 2 end-->
+      <div class="col3"><!-- col 3 -->
+        <ul>
+          <a href="#">
+            <li class="currentPage">Home</li>
+          </a>
+          <a href="#">
+            <li>Image Search</li>
+          </a>
+          <a href="#">
+            <li>About</li>
+          </a>
+          <a href="#">
+            <li>Kofi</li>
+          </a>
+        </ul>
+      </div><!-- col 3 end-->
+    </nav>
+    <header>
+      <h1>No Man's Sky Builder Aid</h1>
+      <h2>Find the resources for your item</h2>
+    </header>
+    <app-root><!-- angular test. ideally, I'd like the resource names and amounts when the user inputs an item-->
+      <main class="grid">
+        <form> 
+          <input type="text" name="userItem" id="item" placeholder="Enter your Item..." ng-model="message">
+           <br>
+          <button type="submit" onclick="userInput()">
+            <p>Submit</p>
+          </button>
+        </form>
+      </main>
+     </app-root>
+    <footer>
+      <p>Copyright &copy 2019 - 2029 Jolisa Jackman</p>
+    </footer>
+  </body> 
+</html>
